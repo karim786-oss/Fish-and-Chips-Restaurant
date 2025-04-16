@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Title of the webpage -->
+    <title>Fish & Chips chinese Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        nav {
+            text-align: right;
+            font-size: 20px;
+            color: red;
+            margin-top: 20px;
+        }
+        
+        .light-mode {
+            background: #fff;
+            color: #000;
+        }
+        .light-mode header {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .light-mode .login-form {
+            background: rgba(255, 255, 255, 0.7);
+        }
+        .light-mode nav a {
+            color: #000;
+        }
+        .light-mode nav a:hover {
+            color: #9daf4c;
+        }
+        .light-mode .link {
+            color: #000000;
+        }
+        .light-mode .link:hover {
+            color: #12556d;
+        }
+        
+        .dark-mode {
+            background: #333;
+            color: #ffffff;
+        }
+        .dark-mode header {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .dark-mode .login-form {
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .dark-mode nav a {
+            color: #fff;
+        }
+        .dark-mode nav a:hover {
+            color: #af4c81;
+        }
+        .dark-mode .link {
+            color: #ffffff;
+        }
+        .dark-mode .link:hover {
+            color: #4CAF50;
+        }
+        
+        .toggle-btn {
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #ff9800, #f44336);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s, box-shadow 0.3s;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .toggle-btn:hover {
+            background: linear-gradient(45deg, #ff5722, #e91e63);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <script>
+       // JavaScript to handle form submission and login redirection
+        function handleLogin(event) {
+            event.preventDefault(); 
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Simple validation check
+            if (email && password) {
+               // Redirect to the menu page if validation is successful
+                window.location.href = 'menu.html'; 
+            } else {
+                alert('Please enter both email and password.');
+            }
+        }
+
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('loginForm');
+            form.addEventListener('submit', handleLogin);
+        });
+    </script>
+</head>
+<body style="background-image: url('photo.jpg'); background-size: cover; margin: 30px;">
+    <!-- Page heading -->
+    <h1 style="text-align:center; font-size: 50px; color:black;">Welcome To Fish & Chips Restaurant</h1>
+    <!-- Navigation bar -->
+    <button class="toggle-btn" onclick="toggleMode()">Dark/Light Mode</button>
+    <nav>
+        <a href="3.Product.html">Go to Product</a> |
+        <a href="1.aboutUs.html">About Us</a> |
+        <a href="2.ContactUs.html">Contact Us</a>
+    </nav>
+
+    <!-- Login section -->
+    <section>
+        <div class="login-box">
+            <form id="loginForm" action="#">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <label for="email">Email</label>
+                    <br><br>
+                    <input type="email" id="email" class="email" required>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <label for="password">Password</label>
+                    <br><br>
+                    <input type="password" id="password" required> 
+                </div>
+                <div class="remember-forget">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="password.html">Forget Password?</a>
+                </div>
+                <button type="submit">Login</button>
+                <div class="register-link">
+                     <a href="r.html">Register</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <!-- Footer content can go here -->
+        <div class="timing">
+            Opening Hours: Monday-Saturday 11:30 am - 9:00 pm
+        </div>
+        <div class="footer-contain"> 
+            <!-- Contact information using the contact class for styling -->
+            Contact Us
+            <br/>
+            Email: frontdesk@fishandchipschinese.co.uk
+            <br/>
+            Contact no: 07853216714
+            <br/>
+            Address: southall, London
+            <br/> 
+            Postcode: UB1 2B1
+        </div>
+    </footer>
+</body>
+</html>
