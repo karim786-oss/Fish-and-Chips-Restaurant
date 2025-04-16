@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="mode.css">
+<!-- the following code is to create a styling class -->
+<style>
+nav{
+text-align: right;
+font-size: 20px;
+margin: 5%
+}
+.center {
+  text-align: center;
+  color: Red; font-size: 40px;
+}
+
+.para_center {
+  text-align: center;
+  color: green;
+  font-size: 20px;
+}
+   
+
+
+</style>
+
+<title>Fish & Chips chinese Restaurant</title>
+<script>
+    function toggleMode() {
+        document.body.classList.toggle('dark-mode');
+        
+        // Save the current mode in localStorage
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    // Load the saved mode on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    });
+</script>
+</head>
+<body>
+
+<h1 class="center">Product</h1> <!-- in this line I am calling the center class that we defined above in line 6 -->
+<nav>
+<a href="HomePage.html">Home Page</a>
+<button class="toggle-btn" onclick="toggleMode()">Dark/Light Mode</button>
+
+</nav>
+<div align="center">
+<img src="fish.jpg" alt="Fish and Chips" width="400" height="250">
+</div>
+
+<p class="para_center">Fish and chips is a classic British dish consisting of battered and deep-fried fish, typically cod or haddock, served with thick-cut fried potatoes known as chips. Traditionally, it is seasoned with salt and vinegar and often accompanied by sides such as mushy peas, tartar sauce, and sometimes curry sauce. We offer different types of fish like, cod, haddock, plaice, rock & husk. It is special dish of our restaurant.</p>
+<br/><br/>
+<div align="center">
+<img src="scampi.jpg" alt="Scampi & Chips" width="400" height="250">
+</div>
+<p class="para_center"> Breaded scampi is a popular dish, especially in the UK. It is one of the best dish of our fish and chip restaurant.It is often served with chips, making it a classic "scampi and chips" meal. It is also commonly accompanied by tartar sauce, lemon wedges, and sometimes a side salad or peas.</p>
+<br/><br/>
+<div align="center">
+<img src="vburger.jpg" alt="Burger1" width="400" height="250">
+<img src="cburger.jpg"  alt="Burger2" width="400" height="250">
+</div>
+<p class="para_center"> Burger is one of the side dish of our restaurant.  We offer different types of burger such as, veggie Burger, Cheese Burger, Chicken Burger and fish Burger. veggie burger, is a popular alternative to traditional meat-based burgers, catering to vegetarians and those seeking a healthier option. Cheese Burger is made from ground beef, seasoned with salt and pepper. Chicken burger is made up of chicken fillet. We sell most chicken burger in our restaurant. Like wise, we have fish burger which is made up of fish cake. Typically, the best dish for students.</p>
+<br/><br/>
+
+<div align="center">
+<img src="nuggets.jpg" alt="Nuggets & Chips" width="400" height="250">
+</div>
+<p class="para_center"> Chicken nuggets are a popular fast food item and snack made from chicken meat that has been breaded or battered and then deep-fried or baked. It is one of the best side order of our restaurant mostly liked by students. We offer discout for students in this item. It commonly served with a variety of dipping sauces, such as ketchup, barbecue sauce, honey mustard, ranch, or sweet and sour sauce.</p>
+
+<div align="center">
+<img src="sussage.jpg" alt="sussage & Chips" width="400" height="250">
+</div>
+<p class="para_center">  Sussage is a popular dish in the United Kingdom, particularly enjoyed at fish and chip shops. We offer chicken sussage that can be battered or palin. We served this with or without chips. Common condiments include salt and vinegar, ketchup, brown sauce, or curry sauce. Some people also enjoy mushy peas or baked beans on the side.Battered sausage and chips is a beloved British comfort food that combines savory sausages with a crispy, golden batter and hearty, fluffy chips.</p> 
+
+
+
+</body>
+</html>
