@@ -1,0 +1,53 @@
+/* Default Light Mode Styles */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+nav {
+    text-align: right;
+    font-size: 20px;
+    margin: 5%;
+}
+
+.center {
+    text-align: center;
+    color: Red; /* Red in light mode */
+    font-size: 40px;
+}
+
+body.dark-mode .center {
+    color: #ff6666; /* Lighter red in dark mode */
+}
+
+.para_center {
+    text-align: center;
+    color: green;
+    font-size: 20px;
+}
+
+body.dark-mode .para_center {
+    color: #66ff66; /* Lighter green in dark mode */
+}
+
+button.toggle-btn {
+    background-color: #f0f0f0;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+body.dark-mode button.toggle-btn {
+    background-color: #333333;
+    color: #ffffff;
+}
